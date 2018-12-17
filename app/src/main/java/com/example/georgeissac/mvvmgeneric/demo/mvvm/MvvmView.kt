@@ -4,5 +4,5 @@ package com.example.georgeissac.mvvmgeneric.demo.mvvm
 
 
 interface MvvmView<P : MvvmViewModel> {
-    fun retrieveAssociatedPresenterInstance(): P
+    fun retrieveAssociatedViewModelInstance(): P
 }

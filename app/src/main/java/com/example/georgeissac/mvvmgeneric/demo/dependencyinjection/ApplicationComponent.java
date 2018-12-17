@@ -4,7 +4,6 @@ package com.example.georgeissac.mvvmgeneric.demo.dependencyinjection;
 
 
 import com.example.georgeissac.mvvmgeneric.demo.DemoActivity;
-import com.example.georgeissac.mvvmgeneric.demo.data.DataRepository;
 
 import dagger.Component;
 
