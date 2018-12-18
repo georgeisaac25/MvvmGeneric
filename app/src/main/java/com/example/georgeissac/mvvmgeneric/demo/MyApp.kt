@@ -22,7 +22,7 @@ class MyApp : Application() {
         appComponent = DaggerApplicationComponent.builder().apiServiceModule(ApiServiceModule())
             .databaseModule(DatabaseModule(this))
             .dataRepositoryModule(DataRepositoryModule())
-            .viewModelModule(ViewModelModule())
+            //.viewModelModule(ViewModelModule())
             .build()
     }
 }

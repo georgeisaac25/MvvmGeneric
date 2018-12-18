@@ -29,8 +29,8 @@ class DemoActivity : BaseView<DemoContract.ViewModel>(),DemoContract.View{
     @Inject
     lateinit var dataRepository: RepositoryContract
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
+    /*@Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory*/
 
     lateinit var demoViewModel: DemoViewModel
 
@@ -42,13 +42,14 @@ class DemoActivity : BaseView<DemoContract.ViewModel>(),DemoContract.View{
         vm.destroy()*/
     }
 
-    override fun getDependencies() {
+    override fun inject() {
         if (application is MyApp)
             (application as MyApp).appComponent.inject(this)
     }
 
-    override fun retrieveAssociatedViewModelInstance(): DemoContract.ViewModel {
-        return  ViewModelProviders.of(this, viewModelFactory)
-            .get(demoViewModel::class.java!!)
+    override fun getViewModelInstance(): DemoContract.ViewModel {
+        //TODO Inject from actvity scope
+        //for now using null value
+        return demoViewModel
     }
 }
