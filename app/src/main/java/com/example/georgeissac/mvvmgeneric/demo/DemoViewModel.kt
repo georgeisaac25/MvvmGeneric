@@ -8,12 +8,11 @@ import kotlinx.coroutines.Job
 class DemoViewModel(repository: RepositoryContract,job: Job)
     : BaseViewModel(job),DemoContract.ViewModel {
 
-    //val job : Job
     override fun getResult() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun destroy() {
-        getJob().cancel()
+        commonJob.cancel()
     }
 }
